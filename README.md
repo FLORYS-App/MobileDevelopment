@@ -13,10 +13,10 @@ The Mobile Development team is committed to:
 
 ## Team Members
 
-| Role | Member ID    | Name               | University                        | Status   |
-|------|--------------|--------------------|-----------------------------------|----------|
-| MD   | A452B4KY1450 | Fauzan Azima       | Universitas Muhammadiyah Jakarta  | Active   |
-| MD   | A452B4KY4520 | Yasir Abduzzhohir  | Universitas Muhammadiyah Jakarta  | Active   |
+ Member ID    | Name               | University                        | Status   |
+--------------|--------------------|-----------------------------------|----------|
+A452B4KY1450 | Fauzan Azima       | Universitas Muhammadiyah Jakarta  | Active   |
+A452B4KY4520 | Yasir Abduzzhohir  | Universitas Muhammadiyah Jakarta  | Active   |
 
 
 ## Tech Stack
