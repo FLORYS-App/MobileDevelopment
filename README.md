@@ -23,7 +23,7 @@ A452B4KY4520 | Yasir Abduzzhohir  | Universitas Muhammadiyah Jakarta  | Active  
 
 Our mobile development projects use various tools and technologies to create robust and performant applications:
 
-- **Languages**: Kotlin, Java, Swift, Dart
-- **Frameworks**: Android SDK, SwiftUI, Flutter
-- **Development Tools**: Xcode, Android Studio, Firebase, GitHub Actions for CI/CD
-- **Design**: Figma, Adobe XD
+- **Languages**: Kotlin
+- **Frameworks**: Android SDK
+- **Development Tools**: Android Studio
+- **Design**: Figma
