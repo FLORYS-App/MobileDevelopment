@@ -13,15 +13,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" >
 
-    <View
-        android:id="@+id/rectangle_2"
-        android:layout_width="410dp"
-        android:layout_height="316dp"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/rectangle22"
-        tools:ignore="MissingConstraints" />
+        <View
+            android:id="@+id/rectangle_2"
+            android:layout_width="410dp"
+            android:layout_height="316dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rectangle22"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/frame_container"

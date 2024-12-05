@@ -2,6 +2,7 @@
     <string name="app_name">Florys</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
+    <string name="title_more">More</string>
     <string name="title_chat">Chat</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -13,13 +14,14 @@
 
     <!-- sign in -->
     <string name="sign_up">Sign up</string>
-    <string name="enter_email_hint">Masukkan email Anda</string>
-    <string name="enter_password_hint">Masukkan kata sandi Anda</string>
-    <string name="re_enter_password_hint">Masukkan ulang kata sandi Anda</string>
-    <string name="enter_email">Enter email</string>
-    <string name="enter_passw">Enter Password</string>
-    <string name="re_enter_pa">Re-enter Password</string>
-    <string name="next">Sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="enter_email_hint">Enter your email</string>
+    <string name="enter_password_hint">Enter your password</string>
+    <string name="enter_email">Email</string>
+    <string name="enter_passw">Password</string>
     <string name="already_hav">Already have an account? Sign in</string>
 
     <!-- home -->
@@ -42,4 +44,36 @@
 
     <!-- adapter -->
     <string name="thumbnail_article">article thumbnail\n</string>
+
+
+    <!-- dashboard -->
+    <string name="profile">
+            Profile
+        </string>
+    <string name="about_app">
+        About Application
+    </string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="about_appli">
+        Florys is an Android application that can help houseplant owners take better care of their plants. This application can help analyze plant health through photos or scans of plants and provide care suggestions based on the weather, temperature, and humidity around the plant.
+    </string>
+    <string name="day_streak_">
+        day streak!
+    </string>
+
+    <string name="water_me">
+Water me
+</string>
+    <string name="xx">XX</string>
+    <string name="enter_name">Name</string>
+    <string name="enter_name_hint">Enter your name</string>
+
 </resources>

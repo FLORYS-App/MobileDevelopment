@@ -3,12 +3,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#090E05"
     tools:context=".ui.water.WaterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <View
+        android:id="@+id/background_streak"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="461dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#90D7FF"
+        />
+
+    <RelativeLayout
+        android:id="@+id/streak_box"
+        android:layout_width="338dp"
+        android:layout_height="275dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#2F2F2F"
+        >
+
+    <View
+        android:id="@+id/streak_image"
+        android:layout_width="223dp"
+        android:layout_height="275dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="115dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="115dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/art"
+        />
+
+    <TextView
+        android:id="@+id/day_streak_"
+        android:layout_width="122dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="133dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="122dp"
+        android:text="@string/day_streak_"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:textAppearance="@style/title_1"
+        android:gravity="top"
+        />
+
+        <TextView
+            android:id="@+id/some_id"
+            android:layout_width="wrap_content"
+            android:layout_height="144dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:textSize="95sp"
+            android:text="@string/xx"
+            android:textAppearance="@style/title_1"
+            android:gravity="top"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/waterme"
+        android:layout_width="343dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="34dp"
+        android:background="@drawable/button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/waterme_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/water_me"
+            android:textAppearance="@style/title_1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
 
 </FrameLayout>
