@@ -13,9 +13,8 @@ class SplashScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen) // Make sure this matches your layout file name
+        setContentView(R.layout.activity_splash_screen)
 
-        // Duration of the splash screen display (in milliseconds)
         val splashScreenDuration = 3000L
 
         // Handler to start the main activity after the splash screen duration
@@ -23,7 +22,6 @@ class SplashScreenActivity : AppCompatActivity() {
             // Start the main activity
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            // Finish the splash screen activity
             finish()
         }, splashScreenDuration)
     }

@@ -99,7 +99,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="25dp"
-                    android:text="@string/know_about_"
+                    android:text="@string/know_about_rose"
                     android:textAppearance="@style/title_2"
                     android:gravity="center" />
 
@@ -113,7 +113,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="20dp"
                 android:textAppearance="@style/title_2"
-                android:text="@string/lorem_ipsum"
+                android:text="@string/article_rose"
                 android:gravity="top" />
 
             <TextView

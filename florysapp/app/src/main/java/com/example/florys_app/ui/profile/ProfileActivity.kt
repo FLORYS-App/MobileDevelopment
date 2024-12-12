@@ -41,14 +41,14 @@ class ProfileActivity : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("session", MODE_PRIVATE)
 
         // Ambil data dari SharedPreferences
-        val name = sharedPreferences.getString("name", "Name not found")
+        val username = sharedPreferences.getString("username", "Name not found")
         val email = sharedPreferences.getString("email", "Email not found")
         val userId = sharedPreferences.getString("userId", "UsernId not found")
         val password = sharedPreferences.getString("password", "Password not found")
         //val token = sharedPreferences.getString("token", "Password not found")
 
         // Tampilkan data di TextView
-        binding.nameProfile.text = name
+        binding.nameProfile.text = username
         binding.emailProfile.text = email
         //binding.userIdProfile.text = userId
         binding.passwordProfile.text = password

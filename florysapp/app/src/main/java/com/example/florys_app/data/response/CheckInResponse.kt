@@ -7,6 +7,7 @@ data class CheckInResponse(
 
 data class CheckInCountResponse(
     val username: String,
+    val email: String,
     val checkInCount: Int
 )
 

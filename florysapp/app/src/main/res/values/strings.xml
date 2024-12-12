@@ -5,11 +5,10 @@
     <string name="title_more">More</string>
     <string name="title_chat">Chat</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_water">Water</string>
 
-    <!-- spalsh screen -->
+    <!-- splash screen -->
     <string name="florys">FLORYS</string>
 
     <!-- sign in -->
@@ -28,61 +27,57 @@
 
     <!-- home -->
     <string name="hi">Hi</string>
-    <string name="search">
-        Search
-    </string>
-    <string name="know_about_">
-        Know about Flowers
-    </string>
-    <string name="recent_arti">
-        Recent Articles
-    </string>
+    <string name="search">Search</string>
+    <string name="know_about_">Know about Flowers</string>
+    <string name="know_about_rose">Know about Rose Flower</string>
+    <string name="know_about_orchid">Know about Orchid Flower</string>
+    <string name="know_about_jasmine">Know about Jasmine Flower</string>
+    <string name="recent_arti">Recent Articles</string>
 
     <!-- flower detail -->
     <string name="image_cover">Image Cover</string>
     <string name="lorem_ipsum">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dictum egestas dolor egestas. Netus pharetra, rhoncus tortor duis sit. In ipsum diam orci morbi ultricies massa amet. Aenean urna phasellus eget vestibulum, vulputate dui auctor sed est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dictum egestas dolor egestas.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dictum egestas dolor egestas. Netus pharetra, rhoncus tortor duis sit. In ipsum diam orci morbi ultricies massa amet. Aenean urna phasellus eget vestibulum, vulputate dui auctor sed est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dictum egestas dolor egestas.
+    </string>
+    <string name="article_rose">
+        Ornamental roses are one of the most popular plants because of their beauty and distinctive aroma. To make roses grow lush and healthy, it is necessary to take proper care. Water the roses regularly, but do not overdo it, make sure the soil is moist and use water that is clean and does not contain chlorine. Apply a balanced and nutritionally complete fertiliser regularly, and make sure the roses get enough sunlight, but not too much. Cut roses regularly to maintain their shape and size, and cut off wilted or damaged flowers to prevent the spread of disease. With proper care, roses can grow lush and healthy, and produce beautiful and fragrant flowers.
+    </string>
+    <string name="article_orchid">
+        Orchid is one of the most popular ornamental plants because of its beauty and unique shape. To make orchid flowers grow lush and healthy, proper care needs to be taken. Water the orchid flowers regularly, but don\'t overdo it, make sure the soil is moist and use clean, non-chlorinated water. Apply a balanced and nutritionally complete fertiliser regularly, and make sure the orchids get enough sunlight, but not too much. Ensure the ideal room temperature for orchid flowers, which is between 18-24°C, and cut orchid flowers regularly to maintain their shape and size. With proper care, orchid flowers can grow lush and healthy, and produce beautiful and unique flowers.
+    </string>
+    <string name="article_jasmine">
+        Jasmine flowers are popular ornamental plants for their beauty and fragrance. To care for it, ensure the plant gets 4-6 hours of direct sunlight a day and water 2-3 times a week or when the soil starts to dry out but avoid over watering. Apply organic fertiliser once every 2-3 months and prune regularly to keep the plant in shape and stimulate new flower growth. Check the plant periodically to control pests such as aphids or caterpillars with natural insecticides or insecticidal soap. With proper care, your jasmine flowers will thrive and produce beautiful and fragrant flowers.
     </string>
 
     <!-- adapter -->
-    <string name="thumbnail_article">article thumbnail\n</string>
-
+    <string name="thumbnail_article">article thumbnail</string>
 
     <!-- dashboard -->
-    <string name="profile">
-            Profile
-        </string>
-    <string name="about_app">
-        About Application
-    </string>
+    <string name="profile">Profile</string>
+    <string name="about_app">About Application</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
+    <string name="welcome">Welcome!</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="login_failed">Login failed</string>
     <string name="about_appli">
-        Flora Leaf Observation &amp; Recognition Systems \nis an Android application that can help houseplant owners take better care of their plants. This application can help analyze plant health through photos or scans of plants and provide care suggestions based on the weather, temperature, and humidity around the plant.
+        Flora Leaf Observation &amp; Recognition Systems is an Android application that can help houseplant owners take better care of their plants. This application can help analyze plant health through photos or scans of plants and provide care suggestions based on the weather, temperature, and humidity around the plant.
     </string>
-    <string name="day_streak_">
-        day streak!
-    </string>
+    <string name="day_streak_">day streak!</string>
 
-    <string name="water_me">
-Water me
-</string>
+    <string name="water_me">Water me</string>
     <string name="xx">XX</string>
     <string name="enter_name">Name</string>
     <string name="enter_name_hint">Enter your name</string>
-    <string name="result">"Kondisi Bunga "</string>
+    <string name="result">Kondisi Bunga</string>
     <string name="image_classifier_failed">Silakan masukkan berkas gambar terlebih dahulu</string>
-    <string name="result_text_template">Hasil:\\n%s\\n\\nWaktu Inferensi: %d ms</string>
+    <string name="result_text_template">Hasil:\n%s\n\nWaktu Inferensi: %d ms</string>
     <string name="unselect_image">Pilih Gambar Untuk dianalisis</string>
     <string name="edit_photo_profile">Edit Photo Profile</string>
     <string name="sub_tittle"><![CDATA[Flora Leaf Observation & Recognition Systems]]></string>
     <string name="confirm_pass">Confirm Password</string>
-
 </resources>

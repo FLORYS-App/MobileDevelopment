@@ -18,6 +18,4 @@ class AboutActivity : AppCompatActivity() {
             insets
         }
     }
-
-
 }

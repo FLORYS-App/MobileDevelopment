@@ -19,5 +19,4 @@ class ApiConfig {
             .build()
         return retrofit.create(ApiInterface::class.java)
     }
-
 }

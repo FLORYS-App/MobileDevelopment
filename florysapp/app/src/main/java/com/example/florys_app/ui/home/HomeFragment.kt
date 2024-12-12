@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.florys_app.R
 import com.example.florys_app.ui.flower.FlowerActivity
+import com.example.florys_app.ui.flower.JasmineActivity
+import com.example.florys_app.ui.flower.OrchidActivity
 
 class HomeFragment : Fragment() {
 
@@ -25,12 +27,12 @@ class HomeFragment : Fragment() {
 
         // Mengatur listener untuk flower_2
         view.findViewById<View>(R.id.flower_2).setOnClickListener {
-            startActivity(Intent(requireContext(), FlowerActivity::class.java))
+            startActivity(Intent(requireContext(), OrchidActivity::class.java))
         }
 
         // Mengatur listener untuk flower_3
         view.findViewById<View>(R.id.flower_3).setOnClickListener {
-            startActivity(Intent(requireContext(), FlowerActivity::class.java))
+            startActivity(Intent(requireContext(), JasmineActivity::class.java))
         }
 
         return view
