@@ -27,9 +27,8 @@
 
     <ImageView
         android:id="@+id/rectangle_1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/rectangle_1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="256dp"
         android:text="@string/sign_up"
         android:textAppearance="@style/sign_up"
         android:gravity="top"
@@ -67,7 +66,9 @@
         android:background="@drawable/rectangle_2"
         android:hint="@string/enter_name_hint"
         android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:padding="12dp"
+        android:inputType="textPersonName"
         app:layout_constraintTop_toBottomOf="@id/enter_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -85,13 +86,15 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/rectangle_2"
+        android:id="@+id/register_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_2"
         android:hint="@string/enter_email_hint"
         android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:padding="12dp"
+        android:inputType="textEmailAddress"
         app:layout_constraintTop_toBottomOf="@id/enter_email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -104,32 +107,56 @@
         android:text="@string/enter_passw"
         android:textAppearance="@style/enter_passw"
         android:gravity="top"
-        app:layout_constraintTop_toBottomOf="@id/rectangle_2"
+        app:layout_constraintTop_toBottomOf="@id/register_email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/rectangle_3"
+        android:id="@+id/register_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_2"
         android:hint="@string/enter_password_hint"
         android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:padding="12dp"
         android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/enter_passw"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/enter_confirm_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="-220dp"
+        android:text="@string/confirm_pass"
+        android:textAppearance="@style/enter_passw"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/register_pass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <RelativeLayout
-        android:id="@+id/button"
+    <EditText
+        android:id="@+id/confirm_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-400dp"
+        android:background="@drawable/rectangle_2"
+        android:hint="@string/enter_confirm_pass_hint"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/enter_confirm_pass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/button_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/button"
-        app:layout_constraintTop_toBottomOf="@id/rectangle_3"
+        app:layout_constraintTop_toBottomOf="@id/register_pass"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -146,15 +173,37 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/already_hav"
+        android:id="@+id/already_have"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/already_hav"
+        android:text="@string/dont_hav"
         android:textAppearance="@style/already_hav"
         android:gravity="top"
-        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_signup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/have_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/sign_up"
+        android:textColor="@color/seed"
+        android:textAppearance="@style/already_hav"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/button_signup"
+        app:layout_constraintStart_toEndOf="@id/already_have" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

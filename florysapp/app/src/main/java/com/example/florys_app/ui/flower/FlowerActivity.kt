@@ -3,6 +3,7 @@ package com.example.florys_app.ui.flower
 import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,16 +12,41 @@ import com.example.florys_app.R
 import com.example.florys_app.databinding.ActivityFlowerBinding
 
 class FlowerActivity : AppCompatActivity() {
+    // Assuming vBinding is initialized properly
+    private lateinit var vBinding: ActivityFlowerBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        vBinding = ActivityFlowerBinding.inflate(layoutInflater)
+        setContentView(vBinding.root)
+
+        // Set up the topAppBar with a navigation icon
+        vBinding.topAppBar.setNavigationIcon(R.drawable.round_keyboard_arrow_left_24)
+        vBinding.topAppBar.setNavigationOnClickListener {
+            // Handle navigation icon press
+            onBackPressed()
+        }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+}
+
+
+/*
+class FlowerActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFlowerBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFlowerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupToolbar()
+        //setupToolbar()
 
         //val event = intent.getParcelableExtra<FlowerEntity>("EXTRA_EVENT")
         //event?.let { setupEventDetails(it) }
@@ -64,3 +90,5 @@ class FlowerActivity : AppCompatActivity() {
      */
 
 }
+
+ */

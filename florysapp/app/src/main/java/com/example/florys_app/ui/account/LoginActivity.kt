@@ -1,7 +1,5 @@
 package com.example.florys_app.ui.account
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -20,7 +18,7 @@ import retrofit2.Response
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var sharedPreferences: SharedPreferences
-/*
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -37,26 +35,22 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupAction() {
-        binding.btnLogin.setOnClickListener {
-            val email = binding.edLoginEmail.text.toString()
-            val password = binding.edLoginPassword.text.toString()
+        binding.buttonSignin.setOnClickListener {
+            val email = binding.loginEmail.text.toString()
+            val password = binding.loginPass.text.toString()
 
             when {
                 email.isEmpty() -> {
-                    binding.edLoginEmail.error = "Email is required"
-                    binding.edLoginEmail.requestFocus()
+                    Toast.makeText(this, "Email is required", Toast.LENGTH_SHORT).show()
                 }
                 !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
-                    binding.edLoginEmail.error = "Invalid email format"
-                    binding.edLoginEmail.requestFocus()
+                    Toast.makeText(this, "Invalid email format", Toast.LENGTH_SHORT).show()
                 }
                 password.isEmpty() -> {
-                    binding.edLoginPassword.error = "Password is required"
-                    binding.edLoginPassword.requestFocus()
+                    Toast.makeText(this, "Password is required", Toast.LENGTH_SHORT).show()
                 }
                 password.length < 8 -> {
-                    binding.edLoginPassword.error = "Password must be at least 8 characters"
-                    binding.edLoginPassword.requestFocus()
+                    Toast.makeText(this, "Password must be at least 8 characters", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
                     loginUser(email, password)
@@ -64,12 +58,13 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        binding.tvRegister.setOnClickListener {
+        binding.dontHaveSignin.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
+
     private fun isLoggedIn(): Boolean {
-        return !sharedPreferences.getString("token", "").isNullOrEmpty()
+        return sharedPreferences.getBoolean("isLoggedIn", false)
     }
 
     private fun loginUser(email: String, password: String) {
@@ -83,11 +78,9 @@ class LoginActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     response.body()?.let { loginResponse ->
                         if (!loginResponse.error) {
-
                             sharedPreferences.edit().apply {
+                                putBoolean("isLoggedIn", true)
                                 putString("token", loginResponse.loginResult.token)
-                                putString("userId", loginResponse.loginResult.userId)
-                                putString("name", loginResponse.loginResult.name)
                                 apply()
                             }
 
@@ -114,6 +107,4 @@ class LoginActivity : AppCompatActivity() {
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
-
- */
 }

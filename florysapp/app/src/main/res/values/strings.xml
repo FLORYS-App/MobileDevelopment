@@ -20,9 +20,11 @@
     <string name="password">Password</string>
     <string name="enter_email_hint">Enter your email</string>
     <string name="enter_password_hint">Enter your password</string>
+    <string name="enter_confirm_pass_hint">Re-enter your password</string>
     <string name="enter_email">Email</string>
     <string name="enter_passw">Password</string>
-    <string name="already_hav">Already have an account? Sign in</string>
+    <string name="already_hav">Already have an account?</string>
+    <string name="dont_hav">Don\'t have an account?</string>
 
     <!-- home -->
     <string name="hi">Hi</string>
@@ -63,7 +65,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="about_appli">
-        Florys is an Android application that can help houseplant owners take better care of their plants. This application can help analyze plant health through photos or scans of plants and provide care suggestions based on the weather, temperature, and humidity around the plant.
+        Flora Leaf Observation &amp; Recognition Systems \nis an Android application that can help houseplant owners take better care of their plants. This application can help analyze plant health through photos or scans of plants and provide care suggestions based on the weather, temperature, and humidity around the plant.
     </string>
     <string name="day_streak_">
         day streak!
@@ -75,5 +77,12 @@ Water me
     <string name="xx">XX</string>
     <string name="enter_name">Name</string>
     <string name="enter_name_hint">Enter your name</string>
+    <string name="result">"Kondisi Bunga "</string>
+    <string name="image_classifier_failed">Silakan masukkan berkas gambar terlebih dahulu</string>
+    <string name="result_text_template">Hasil:\\n%s\\n\\nWaktu Inferensi: %d ms</string>
+    <string name="unselect_image">Pilih Gambar Untuk dianalisis</string>
+    <string name="edit_photo_profile">Edit Photo Profile</string>
+    <string name="sub_tittle"><![CDATA[Flora Leaf Observation & Recognition Systems]]></string>
+    <string name="confirm_pass">Confirm Password</string>
 
 </resources>

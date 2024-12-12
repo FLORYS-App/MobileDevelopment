@@ -17,7 +17,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/image_view"
+            android:id="@+id/image_art_h"
             android:layout_width="149dp"
             android:layout_height="78dp"
             android:layout_marginTop="8dp"
@@ -39,7 +39,7 @@
             android:textAppearance="@style/title_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_view" />
+            app:layout_constraintTop_toBottomOf="@id/image_art_h" />
 
         <TextView
             android:id="@+id/summary_text_view"

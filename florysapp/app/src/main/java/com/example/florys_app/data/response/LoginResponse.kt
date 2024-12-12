@@ -8,6 +8,9 @@ data class LoginResponse(
 
 data class LoginResult(
     val userId: String,
-    val name: String,
-    val token: String
+    val username: String,
+    val token: String,
+
+    val email: String,
+    val password: String
 )

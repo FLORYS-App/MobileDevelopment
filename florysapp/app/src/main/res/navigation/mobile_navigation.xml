@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.yourapp.ui.home.HomeFragment"
+        android:name="com.example.florys_app.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
@@ -20,14 +20,11 @@
     <fragment
         android:id="@+id/nav_scan"
         android:label="Scan"
-        tools:layout="@layout/activity_scan"/>
-        <!--
-        <action android:id="@+id/navigate_to_result"
-            app:destination="@id/scan_result"
-            app:popUpToInclusive="true"
-            app:popUpTo="@id/scan"/>
-
-    </fragment>-->
+        tools:layout="@layout/fragment_placeholder">
+        <action
+            android:id="@+id/action_nav_scan_to_scan_activity"
+            app:destination="@id/nav_scan" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_chat"

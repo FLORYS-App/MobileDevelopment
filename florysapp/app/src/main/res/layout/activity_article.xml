@@ -25,7 +25,7 @@
             app:titleCollapseMode="scale">
 
             <ImageView
-                android:id="@+id/image_view"
+                android:id="@+id/image_art_back"
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
                 android:contentDescription="@string/image_cover"
@@ -51,6 +51,17 @@
                 android:background="@android:color/transparent"
                 app:layout_collapseMode="pin" />
 
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/round_keyboard_arrow_left_24"
+                app:navigationIconTint="@color/white"
+                android:background="@color/main_color"
+
+                app:title="Article"
+                app:titleTextColor="@color/white"
+                app:titleCentered="true" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -91,7 +102,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="25dp"
-                    android:text="@string/know_about_"
+                    android:text="@string/recent_arti"
                     android:textAppearance="@style/title_2"
                     android:gravity="center" />
 

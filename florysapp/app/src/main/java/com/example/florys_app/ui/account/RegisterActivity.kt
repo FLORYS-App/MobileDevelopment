@@ -1,7 +1,5 @@
 package com.example.florys_app.ui.account
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -23,7 +21,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var viewModel: AuthViewModel
     private lateinit var sharedPreferences: SharedPreferences
-/*
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
@@ -37,32 +35,32 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun setupViews() {
-        binding.edRegisterName.setOnEditorActionListener { _, actionId, _ ->
+        binding.registerName.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
-                binding.edRegisterEmail.requestFocus()
+                binding.registerEmail.requestFocus()
                 true
             } else false
         }
 
-        binding.edRegisterEmail.setOnEditorActionListener { _, actionId, _ ->
+        binding.registerEmail.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
-                binding.edRegisterPassword.requestFocus()
+                binding.registerPass.requestFocus()
                 true
             } else false
         }
 
-        binding.edRegisterPassword.setOnEditorActionListener { _, actionId, _ ->
+        binding.registerPass.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 registerUser()
                 true
             } else false
         }
 
-        binding.btnRegister.setOnClickListener {
+        binding.buttonSignup.setOnClickListener {
             registerUser()
         }
 
-        binding.tvLogin.setOnClickListener {
+        binding.haveSignup.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
@@ -70,57 +68,67 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun observeViewModel() {
         viewModel.email.observe(this) {
-            binding.edRegisterEmail.setText(it)
+            binding.registerEmail.setText(it)
         }
         viewModel.password.observe(this) {
-            binding.edRegisterPassword.setText(it)
+            binding.registerPass.setText(it)
         }
-        viewModel.name.observe(this) {
-            binding.edRegisterName.setText(it)
+        viewModel.username.observe(this) {
+            binding.registerName.setText(it)
         }
     }
 
     private fun registerUser() {
-        val name = binding.edRegisterName.text.toString()
-        val email = binding.edRegisterEmail.text.toString()
-        val password = binding.edRegisterPassword.text.toString()
+        val username = binding.registerName.text.toString()
+        val email = binding.registerEmail.text.toString()
+        val password = binding.registerPass.text.toString()
+        val confirmPassword = binding.confirmPass.text.toString()
 
         when {
-            name.isEmpty() -> {
-                binding.edRegisterName.error = "Name is required"
-                binding.edRegisterName.requestFocus()
+            username.isEmpty() -> {
+                binding.registerName.error = "Name is required"
+                binding.registerName.requestFocus()
             }
             email.isEmpty() -> {
-                binding.edRegisterEmail.error = "Email is required"
-                binding.edRegisterEmail.requestFocus()
+                binding.registerEmail.error = "Email is required"
+                binding.registerEmail.requestFocus()
             }
             !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
-                binding.edRegisterEmail.error = "Invalid email format"
-                binding.edRegisterEmail.requestFocus()
+                binding.registerEmail.error = "Invalid email format"
+                binding.registerEmail.requestFocus()
             }
             password.isEmpty() -> {
-                binding.edRegisterPassword.error = "Password is required"
-                binding.edRegisterPassword.requestFocus()
+                binding.registerPass.error = "Password is required"
+                binding.registerPass.requestFocus()
             }
             password.length < 8 -> {
-                binding.edRegisterPassword.error = "Password must be at least 8 characters"
-                binding.edRegisterPassword.requestFocus()
+                binding.registerPass.error = "Password must be at least 8 characters"
+                binding.registerPass.requestFocus()
+            }
+            confirmPassword.isEmpty() -> {
+                binding.confirmPass.error = "Confirm password is required"
+                binding.confirmPass.requestFocus()
+            }
+            confirmPassword != password -> {
+                binding.confirmPass.error = "Passwords do not match"
+                binding.confirmPass.requestFocus()
             }
             else -> {
-                val registerRequest = RegisterRequest(name, email, password)
+                val registerRequest = RegisterRequest(username, email, password, confirmPassword)
                 val call = NetworkClient.apiInterface.registerUser(registerRequest)
 
-                binding.btnRegister.isEnabled = false
+                binding.buttonSignup.isEnabled = false
 
                 call.enqueue(object : Callback<RegisterResponse> {
                     override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                        binding.btnRegister.isEnabled = true
+                        binding.buttonSignup.isEnabled = true
                         Log.e("API Error", "Failure: ${t.message}")
                         Toast.makeText(this@RegisterActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
                     }
 
                     override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
-                        binding.btnRegister.isEnabled = true
+                        binding.buttonSignup.isEnabled = true
+                        showLoading(false)
                         if (response.isSuccessful) {
                             response.body()?.let { registerResponse ->
                                 if (!registerResponse.error) {
@@ -145,6 +153,8 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
 
- */
 }

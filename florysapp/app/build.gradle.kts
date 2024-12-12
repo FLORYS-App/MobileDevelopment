@@ -35,7 +35,16 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        mlModelBinding = true
     }
+
+    /*
+    aaptOptions {
+        noCompress "tflite"
+    }
+
+     */
+
 }
 
 dependencies {
@@ -54,6 +63,8 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.camera.lifecycle)
+    //implementation(libs.litert.support.api)
+    //implementation(libs.litert)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -70,4 +81,11 @@ dependencies {
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.paging.runtime.ktx)
     implementation(libs.androidx.room.paging)
+
+    implementation("androidx.datastore:datastore-core:1.0.0")
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    implementation("org.tensorflow:tensorflow-lite-support:0.4.4")
+    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
+    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4")
 }

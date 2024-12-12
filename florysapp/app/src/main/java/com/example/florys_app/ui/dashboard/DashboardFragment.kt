@@ -1,38 +1,77 @@
 package com.example.florys_app.ui.dashboard
 
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import com.example.florys_app.R
+import com.example.florys_app.ui.account.LoginActivity
 import com.example.florys_app.databinding.FragmentDashboardBinding
+import com.example.florys_app.ui.about.AboutActivity
+import com.example.florys_app.ui.profile.ProfileActivity
+import com.example.florys_app.ui.welcome.WelcomePageActivity
 
 class DashboardFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
-
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        val view = binding.root
 
-        val textView: TextView = binding.aboutTitle
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        sharedPreferences = requireContext().getSharedPreferences("session", android.content.Context.MODE_PRIVATE)
+
+        binding.profileBtn.setOnClickListener {
+            startActivity(Intent(requireContext(), ProfileActivity::class.java))
         }
-        return root
+
+        binding.aboutBtn.setOnClickListener {
+            startActivity(Intent(requireContext(), AboutActivity::class.java))
+        }
+
+        binding.signOutBtn.setOnClickListener {
+            logout()
+        }
+
+        setHasOptionsMenu(true) // Menambahkan menu ke fragment
+
+        return view
+    }
+
+    private fun logout() {
+        sharedPreferences.edit().clear().apply()
+        startActivity(Intent(requireContext(), WelcomePageActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        })
+        requireActivity().finish()
+    }
+/*
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.dashboard_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+ */
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.sign_out_btn -> {
+                logout()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     override fun onDestroyView() {

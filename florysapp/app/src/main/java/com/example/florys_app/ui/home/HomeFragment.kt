@@ -1,4 +1,4 @@
-package com.example.yourapp.ui.home
+package com.example.florys_app.ui.home
 
 import android.content.Intent
 import android.os.Bundle
