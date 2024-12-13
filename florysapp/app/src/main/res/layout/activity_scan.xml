@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#090E05"
+    android:padding="16dp">
+
+<!--
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:elevation="@dimen/dp_0">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/round_keyboard_arrow_left_24"
+            app:navigationIconTint="@color/white"
+            android:background="@color/main_color"
+            app:title="Scan Flower"
+            app:titleTextColor="@color/white"
+            app:titleCentered="true" />
+    </com.google.android.material.appbar.AppBarLayout>
+-->
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        android:background="#E0E0E0"
+        />
+
+    <RelativeLayout
+        android:id="@+id/button_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/button_gallery"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:foreground="@drawable/galery_button"
+            style="@style/circle_button"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/button_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/scan_button"
+            style="@style/circle_button"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/button_camera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:foreground="@drawable/camera_button"
+            style="@style/circle_button"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

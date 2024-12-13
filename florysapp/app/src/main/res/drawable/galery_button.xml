@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Vector 2 berada di bawah -->
+    <item>
+        <vector
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:aapt="http://schemas.android.com/aapt"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:width="87.55dp"
+            android:height="87.55dp"
+            android:viewportWidth="87.55"
+            android:viewportHeight="87.55"
+            >
+            <group>
+                <clip-path
+                    android:pathData="M87.5472 43.7736C87.5472 67.9491 67.9491 87.5472 43.7736 87.5472C19.5981 87.5472 0 67.9491 0 43.7736C0 19.5981 19.5981 0 43.7736 0C67.9491 0 87.5472 19.5981 87.5472 43.7736Z"
+                    tools:ignore="VectorRaster" />
+                <group
+                    android:translateX="7.054"
+                    android:translateY="-10.714"
+                    android:pivotX="43.774"
+                    android:pivotY="43.774"
+                    android:scaleX="1.745"
+                    android:scaleY="51.262"
+                    android:rotation="58.473"
+                    >
+                    <path
+                        android:pathData="M0 0V87.5472H87.5472V0"
+                        >
+                        <aapt:attr name="android:fillColor">
+                            <gradient
+                                android:type="linear"
+                                android:startX="21.887"
+                                android:startY="43.774"
+                                android:endX="65.66"
+                                android:endY="43.774"
+                                >
+                                <item
+                                    android:color="#75E00A"
+                                    android:offset="0"
+                                    />
+                                <item
+                                    android:color="#0AE0A0"
+                                    android:offset="1"
+                                    />
+                            </gradient>
+                        </aapt:attr>
+                    </path>
+                </group>
+            </group>
+        </vector>
+    </item>
+    <!-- Vector 1 berada di atas -->
+    <item>
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="30dp"
+            android:height="30dp"
+            android:viewportWidth="30"
+            android:viewportHeight="30">
+            <group
+                android:translateX="6"
+                android:translateY="6">
+                <clip-path
+                    android:pathData="M0,0h18v18h-18z"/>
+                <path
+                    android:pathData="M6.75,16.5H11.25C15,16.5 16.5,15 16.5,11.25V6.75C16.5,3 15,1.5 11.25,1.5H6.75C3,1.5 1.5,3 1.5,6.75V11.25C1.5,15 3,16.5 6.75,16.5Z"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="1.5"
+                    android:fillColor="#00000000"
+                    android:strokeColor="#000000"
+                    android:strokeLineCap="round"/>
+                <path
+                    android:pathData="M2.002,14.212L5.7,11.73C6.292,11.333 7.147,11.377 7.68,11.835L7.927,12.052C8.512,12.555 9.457,12.555 10.042,12.052L13.162,9.375C13.747,8.873 14.692,8.873 15.277,9.375L16.5,10.425M6.75,7.5C7.148,7.5 7.529,7.342 7.811,7.061C8.092,6.779 8.25,6.398 8.25,6C8.25,5.602 8.092,5.221 7.811,4.939C7.529,4.658 7.148,4.5 6.75,4.5C6.352,4.5 5.971,4.658 5.689,4.939C5.408,5.221 5.25,5.602 5.25,6C5.25,6.398 5.408,6.779 5.689,7.061C5.971,7.342 6.352,7.5 6.75,7.5Z"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="1.5"
+                    android:fillColor="#00000000"
+                    android:strokeColor="#000000"
+                    android:strokeLineCap="round"/>
+            </group>
+        </vector>
+
+
+    </item>
+</layer-list>

@@ -1,0 +1,83 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/anggrek"
+    tools:context=".ui.welcome.WelcomePageActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FLORYS"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_florys"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sub_tittle"
+        android:textAppearance="@style/title_1"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/welcomeloginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        app:cornerRadius = "20dp">
+    <TextView
+        android:id="@+id/signin_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sign_in"
+        android:textColor="@color/black"
+        android:textAppearance="@style/title_1"
+        android:lineSpacingExtra="7sp"
+        android:gravity="center_vertical"
+        />
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/welcomeregisterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        app:cornerRadius = "20dp">
+        <TextView
+            android:id="@+id/signup_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:textAppearance="@style/title_1"
+            android:lineSpacingExtra="7sp"
+            android:gravity="center_vertical"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
